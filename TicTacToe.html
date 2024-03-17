@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Крестики-Нолики </title>
+</head>
+<body>
+<h1>Крестики-нолики</h1>
+<div class="board"></div>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  background: linear-gradient(45deg, #08041d, #200852);
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  border: 3px solid #3db1ff;
+  box-shadow: 0 0 100px 1px #3db1ff;
+}
+
+.board .cell {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #3db1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  cursor: pointer;
+}
+</style>
+<script>
+// Создаем игровое поле
+const board = document.querySelector(".board");
+const cells = [];
+let currentPlayer = "X";
+let gameOver = false;
+
+// Создаем ячейки на игровом поле
+for (let i = 0; i < 9; i++) {
+  const cell = document.createElement("div");
+  cell.classList.add("cell");
+  cells.push(cell);
+  board.appendChild(cell);
+
+  // Обработчик клика по ячейке
+  cell.addEventListener("click", () => {
+    if (cell.textContent === "" && currentPlayer === "X" && !gameOver) {
+      cell.textContent = currentPlayer;
+      cell.style.cursor = "not-allowed";
+
+      if (checkWin(currentPlayer)) {
+        alert("Игрок " + currentPlayer + " победил!");
+        gameOver = true;
+      } else if (checkDraw()) {
+        alert("Ничья!");
+        gameOver = true;
+      } else {
+        currentPlayer = "O";
+        setTimeout(makeBotMove, 500);
+      }
+    }
+  });
+}
+
+// Ход бота
+function makeBotMove() {
+  const emptyCells = cells.filter((cell) => cell.textContent === "");
+
+  if (emptyCells.length > 0 && currentPlayer === "O") {
+    const randomIndex = Math.floor(Math.random() * emptyCells.length);
+    const botCell = emptyCells[randomIndex];
+    botCell.textContent = currentPlayer;
+    botCell.style.cursor = "not-allowed";
+
+    if (checkWin(currentPlayer)) {
+      alert("Игрок " + currentPlayer + " победил!");
+      gameOver = true;
+    } else if (checkDraw()) {
+      alert("Ничья!");
+      gameOver = true;
+    } else {
+      currentPlayer = "X";
+    }
+  }
+}
+
+// Проверка победы
+function checkWin(player) {
+  const winCombinations = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8], // горизонтальные линии
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8], // вертикальные линии
+    [0, 4, 8],
+    [2, 4, 6], // диагональные линии
+  ];
+
+  return winCombinations.some((combination) => {
+    return combination.every((index) => cells[index].textContent === player);
+  });
+}
+
+// Проверка ничьей
+function checkDraw() {
+  return cells.every((cell) => cell.textContent !== "");
+}
+</script>
+</body>
+</html>
