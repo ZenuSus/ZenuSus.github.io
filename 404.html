@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Ошибка 404 </title>
+</head>
+<body>
+	<div class="wrapperq">
+    <div class="typing-demoq">
+     Oшибка 404
+    </div>
+</div>
+	<br>
+	<div class="wrapper">
+    <div class="typing-demo">
+     Такой страницы на этом сайте нету :(
+    </div>
+</div>
+	<style>
+		.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 36ch;
+  animation: typing 2.1s steps(22), blink .7s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+		.wrapperq {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demoq {
+  width: 11ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Rubik:ital,wght@0,700;1,700&display=swap')
+	</style>
+</body>
+</html>
