@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+ <html lang="ru">
+  <head>
+    <title> ZenuSus </title>   
+  <meta name="yandex-verification" content="8e147d38934ddc16" />
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+
+<body lang="ru" bgcolor= "black"> 
+  
+  
+
+
+
+  <dialog class="dialog1" id="dialog">
+    <h1 class="dialog1text">Факт.</h1>
+    <br>
+    <p class="dialog1text2">😢 Тут пусто.</p>
+    
+    <p class="buttontextpopup1"><button class="dialog1button" id="close-btn"> Ладно</button></p>
+  </dialog>
+
+  <dialog class="dialog2" id="dialog2">
+    <h1 class="dialog2text">Факт.</h1>
+    <br>
+    <p class="dialog2text2">😢 Только этот сайт.</p>
+    
+    <p class="buttontextpopup2"><button class="dialog2button" id="close-btn3"> Ладно</button></p>
+  </dialog>
+
+
+  <div class="txtone">
+ <h1 align="center"> Сайт Зенуса</h1>
+</div>
+<br>
+<div class="texttwo">
+  <p> Привет! Это сайт зенуса. Тут <br> можно посмотреть все его проекты. </p>
+</div>
+
+<br>
+<br>
+<br>
+<div class="project1">
+  <a href="https://t.me/SovaGroup"><img src="https://i.postimg.cc/5tx5bPpp/Group-5tg-channels.png" width="320" height="200" alt="Не загрузилось." class="img1"/></a>.
+</div>
+
+<div class="project2">
+  <button class="negarwe" id="open-btn" type="image">
+  <img src="https://i.postimg.cc/c1TtqQbM/Group-4games-apps.png" width="320" height="200" alt="Не загрузилось." class="img2"/></a>
+  </button>
+</div>
+
+<div class="project3">
+  <button class="negarwe3" id="open-btn3" type="image">
+  <img src="https://i.postimg.cc/ZRKXM57z/Group-3sites.png" width="320" height="200" alt="Не загрузилось." class="img3"/></a>
+  </button>
+</div>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+ .txtone {
+font-family:"Rubik";
+color: ghostwhite;
+} 
+.project1 {
+  margin-left: 20px;
+}
+  .img1:hover {
+    box-shadow: 0px 0px 15px rgba(209, 0, 0, 1), -3px -3px 35px rgba(199, 87, 87, 0.32);
+  }
+
+.project2 {
+margin-left: 400px;
+margin-top: -204px;
+}
+  .img2:hover {
+    box-shadow: 0px 0px 15px rgba(209, 0, 0, 1), -3px -3px 35px rgba(199, 87, 87, 0.32);
+  }
+
+  .negarwe {
+    border-radius: 50px;
+    background: black;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  .dialog1 {
+background: rgb(10, 10, 10);
+border-radius: 15px;
+border-color: azure;
+margin-left: 480px;
+margin-top: 180px;
+width: 400px;
+}
+
+.dialog1text {
+font-family: Rubik;
+color: azure;
+margin-left: 155px;
+}
+
+.dialog1text2 {
+font-family: Rubik;
+color: azure;
+font-size: 20px;
+margin-left: 140px;
+}
+
+.dialog1button {
+  margin-left: 150px;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 14px 29px;
+  font-size: 20px;
+  font-family: Rubik;
+}
+
+.dialog1button:hover {
+  box-shadow: -1px -1px 29px rgba(24, 131, 145, 0.95), 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project3 {
+margin-left: 786px;
+margin-top: -204px;
+}
+
+.negarwe3 {
+    border-radius: 50px;
+    background: black;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  .dialog2 {
+background: rgb(10, 10, 10);
+border-radius: 15px;
+border-color: azure;
+margin-left: 480px;
+margin-top: 180px;
+width: 400px;
+}
+
+.dialog2text {
+font-family: Rubik;
+color: azure;
+margin-left: 155px;
+}
+
+.dialog2text2 {
+font-family: Rubik;
+color: azure;
+font-size: 20px;
+margin-left: 110px;
+}
+
+.dialog2button {
+  margin-left: 150px;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 14px 29px;
+  font-size: 20px;
+  font-family: Rubik;
+}
+
+.img3:hover {
+    box-shadow: 0px 0px 15px rgba(209, 0, 0, 1), -3px -3px 35px rgba(199, 87, 87, 0.32);
+  }
+
+  .dialog2button:hover {
+  box-shadow: -1px -1px 29px rgba(24, 131, 145, 0.95), 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.texttwo {
+  font-family: Rubik;
+  color: azure;
+  margin-left: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+</style>
+
+<script>
+ const dialogElement = document.getElementById("dialog");
+const openBtn = document.getElementById("open-btn");
+const closeBtn = document.getElementById("close-btn");
+
+openBtn.addEventListener("click", () => {
+  dialogElement.show();
+});
+
+closeBtn.addEventListener("click", () => {
+  dialogElement.close();
+});
+
+
+ </script>
+
+ <script>
+  const dialog2Element = document.getElementById("dialog2");
+const openBtn3 = document.getElementById("open-btn3");
+const closeBtn3 = document.getElementById("close-btn3");
+
+openBtn3.addEventListener("click", () => {
+  dialog2Element.show();
+});
+
+closeBtn3.addEventListener("click", () => {
+  dialog2Element.close();
+});
+ </script>
+
+
+
+</body>
+</html>
