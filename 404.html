@@ -1,68 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Ошибка 404 </title>
+    <meta charset="UTF-8" />
+    <title>Тут ничего интересного!</title>
 </head>
-<body bgcolor= "black">
-	<div class="wrapperq">
-    <div class="typing-demoq">
-     Oшибка 404
+<body bgcolor="black">
+    <div class="wrapper">
+        <div class="typing-demo">
+         Привет! Тут нет такой старницы. Попробуй поискать на главной.
+        </div>
     </div>
-</div>
-	
-	<div class="wrapper">
-    <div class="typing-demo">
-     Такой страницы на этом сайте нету :(
-    </div>
-</div>
-	<style>
-		.wrapper {
-  /*This part is important for centering*/
-  display: grid;
-  place-items: center;
-}
 
-.typing-demo {
-  width: 36ch;
-  animation: typing 2.1s steps(22), blink .7s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-  color: white;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
-		.wrapperq {
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+        .wrapper {
   height: 100vh;
   /*This part is important for centering*/
   display: grid;
   place-items: center;
 }
 
-.typing-demoq {
-  width: 11ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+.typing-demo {
+  width: 50ch;
+  animation: typing 2s steps(60), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 50px;
-  color: white;
+  font-family: Rubik;
+  color: azure;
+  font-size: 2em;
 }
 
 @keyframes typing {
@@ -76,7 +42,6 @@
     border-color: transparent
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Rubik:ital,wght@0,700;1,700&display=swap')
-	</style>
+    </style>
 </body>
 </html>
