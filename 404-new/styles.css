@@ -1,0 +1,162 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    color: #00ff00; /* Зелёный неоновый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Чёрный фон */
+    background: radial-gradient(circle, #002200, #000); /* Градиент для "хакерского" фона */
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    text-align: center;
+}
+
+h1.glitch {
+    font-size: 8rem;
+    font-weight: bold;
+    position: relative;
+    color: #00ff00;
+    animation: glitch 2.5s infinite;
+}
+
+h1.glitch::before,
+h1.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #00ff00;
+}
+
+h1.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00ff;
+    animation: glitch-before 2s infinite;
+}
+
+h1.glitch::after {
+    left: -2px;
+    text-shadow: 2px 0 #00ffff;
+    animation: glitch-after 1.5s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes glitch-before {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+    20% {
+        clip-path: inset(0 0 0 50%);
+    }
+    40% {
+        clip-path: inset(0 50% 0 0);
+    }
+    60% {
+        clip-path: inset(50% 0 0 0);
+    }
+    80% {
+        clip-path: inset(0 0 50% 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes glitch-after {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+    20% {
+        clip-path: inset(0 0 0 30%);
+    }
+    40% {
+        clip-path: inset(0 30% 0 0);
+    }
+    60% {
+        clip-path: inset(30% 0 0 0);
+    }
+    80% {
+        clip-path: inset(0 0 30% 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #00ff00;
+    animation: flicker 1s infinite alternate;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #00ff00;
+}
+
+.btn {
+    background-color: #003300; /* Тёмно-зелёный фон */
+    color: #00ff00; /* Зелёный неоновый текст */
+    padding: 15px 30px;
+    margin: 20px 0;
+    border: 2px solid #00ff00; /* Зелёная рамка */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    font-family: 'Source Code Pro', monospace;
+    box-shadow: 0 0 10px #00ff00; /* Неоновое свечение */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #004400; /* Светлее при наведении */
+    box-shadow: 0 0 20px #00ff00; /* Усиление свечения */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Анимация уменьшения при нажатии */
+}
+
+.btn i {
+    margin-right: 10px;
+}
