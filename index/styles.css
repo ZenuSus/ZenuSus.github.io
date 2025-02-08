@@ -1,0 +1,137 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    color: #00ff00; /* Зелёный неоновый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Чёрный фон */
+    background: radial-gradient(circle, #002200, #000); /* Градиент для "хакерского" фона */
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    background-color: #003300;
+    color: #00ff00;
+    padding: 15px 30px;
+    margin: 10px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    font-family: 'Source Code Pro', monospace;
+    box-shadow: 0 0 10px #00ff00;
+    display: inline-block; /* Делаем кнопки блочно-строчными */
+    text-align: center;
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+    min-width: 150px; /* Минимальная ширина для всех кнопок */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Анимация уменьшения при нажатии */
+}
+
+.btn:hover {
+    background-color: #004400; /* Светлее при наведении */
+    box-shadow: 0 0 20px #00ff00; /* Усиление свечения */
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #001100; /* Тёмный фон */
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #00ff00; /* Зелёная рамка */
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    color: #00ff00; /* Зелёный неоновый текст */
+    box-shadow: 0 0 20px #00ff00; /* Неоновое свечение */
+}
+
+.close {
+    color: #00ff00; /* Зелёный неоновый текст */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #00cc00; /* Светлее при наведении */
+    text-decoration: none;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #00ff00; /* Зелёный неоновый текст */
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #00cc00; /* Светлее при наведении */
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    /* Стили для ссылки на донат */
+a.btn {
+    text-decoration: none;     
+}
+}
