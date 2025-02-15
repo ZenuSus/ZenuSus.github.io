@@ -1,100 +1,141 @@
 <!DOCTYPE html>
+<html lang="ru">
 <head>
-    <title> Riba Clicker </title>
-    
-    <meta property="og:title" content="Риба кликер"/>
-   <meta property="og:description" content="Страница игры 'Риба кликер'"/>
-   <meta property="og:image" content="https://zenusus.github.io/images/riba.jpg"/>
-   <meta property="og:type" content="home"/>
-   <meta property="og:url" content= "https://zenusus.github.io/riba.html/ />
-   <meta property="og:title" content="Риба кликер" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riba Clicker</title>
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        h1 i, h2 i {
+            margin-right: 10px;
+        }
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .screenshots img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .screenshots img:hover {
+            transform: scale(1.05);
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .download-button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .screenshots {
+                flex-direction: column;
+                align-items: center;
+            }
+            .screenshots img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<html>
-<body lang="ru" link="orange" vlink="yellow" alink="orange" bgcolor="#1f2a27" >
-    
-    <br>
-<center>
-<h1 class="text1" > RibaClicker </h1>
-<br>
-<img class="img1" src="https://zenusus.github.io/images/riba-screen.jpg"> </img>
-<p class="text2" > Тапайте на рибу и получайте <br> рибакоины, прокачиваетесь что бы <br> зарабатывать быстрее. Я стараюсь <br> выпускать обновления <br> как можно чаще, что бы <br> тапать  рибу было интересно.<br> Заходите в <a href="https://t.me/Zenusoff/"> телеграм </a> и следите <br> за новостями об игре <br> и не только. </p>
-<br>
-<a class="a1" href="https://t.me/Zenusoff/3210"> <img class="img2" src="https://zenusus.github.io/images/download.png">  </a>
-<br>
-<br>
-<div class="changelog">
-<h1 class="txt3"> История версий</h2>
+<body>
 
-    <h3> 1.0 | Добавлена возможность тапать рибу, <br> кнопка сброса и информации. </h3>
-    <h3> 2.0 | Добавлена музыка, немного испрвлена <br> позиция кнопок. | <a href="https://t.me/Zenusoff/3210"> Скачать </a> </h3>
-    <h3> 3.0 | Добавлена прокачка, исправлены <br> незаметные баги. | <a href="https://t.me/Zenusoff/3204"> Скачать</a> </h3>
-    <h3> 4.0 | Скоро | <a href="https://t.me/Zenusoff"> Следить</a> </h3>
-    <br>
-    <h1> Задонатить </h1>
-    <p> Если вы хотите поддержать автора, <br> то можете ему задонатить. <a href="https://t.me/Zenusoff/3099"> Подробнее тут </a>. <br> Я буду благодарен за любую сумму. </p>
-</div>
-</center>
+    <header>
+        <h1><i class="fas fa-fish"></i>Riba Clicker</h1>
+        <p>Игра-кликер, где можно тапать рибу и прокачиватся. </p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2><i class="fas fa-info-circle"></i>О игре</h2>
+            <p>Riba Clicker - это игра-кликер, в которой вы тапаете на рибу, получаете рибакойны и можете прокачиватся для большего заработка. </p>
+        </section>
+
 <br>
 
+        <section>
+            <h2><i class="fas fa-images"></i>Скриншот(ы)</h2>
+            <div class="screenshots">
+                <img src="https://zenusus.github.io/images/riba-screen.jpg" alt="Скриншот 1">
+            </div>
+        </section>
 
-   
+<br>
 
-<style>
+        <section>
+            <h2><i class="fas fa-history"></i>История версий</h2>
+            <ul>
+                <li><strong>Версия 1.0</strong> - Добавлена возможность тапать рибу, и т.п </li>
+                <li><strong>Версия 1.1</strong> - Добавлена прокачка </li>
+                <li><strong>Версия 1.2</strong> - Скоро релиз | <a href="https://t.me/zenusoff" > Следить </a> </li>
+            </ul>
+        </section>
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+<br>
 
-.text1 {
-    color: rgb(255, 255, 255);
-    font-family: rubik;
-   
-}
+        <section>
+            <h2><i class="fas fa-download"></i>Скачать </h2>
+            <p> Можно скачать игру по ссылкам ниже:</p>
+            <a href="https://t.me/Zenusoff/3210" class="download-button"><i class="fas fa-paper-plane"> </i> Cкачать в телеграм </a>
+        </section>
+    </div>
 
-
-
-body {
-   
-}
-
-.img1 {
-    border-radius: 20px;
-    margin-left: -195px;
-    width: 150px;
-    height: 300px;
-}
-
-.text2 {
-    font-family: rubik;
-    color: azure;
-    margin-top: -300px;
-    margin-left: 250px;
-    
-}
-
-.a1 {
-    font-family: rubik;
-    margin-left: 250px;
-    
-}
-
-.img2 {
-    width: 200px;
-    transition: 0.5s;
-    border-radius: 10px;
-}
-
-.img2:hover {
-    box-shadow: 0px 0px 15px rgb(41, 148, 8), -3px -3px 35px rgba(199, 87, 87, 0.32);
-    transition: 0.5s;
-}
-
-.changelog {
-    font-family: rubik;
-    color: azure;
-}
-
-</style>
+    <footer>
+        <p>&copy; 2025 zenusus | Никакие права не защищены. </p>
+    </footer>
 
 </body>
 </html>
