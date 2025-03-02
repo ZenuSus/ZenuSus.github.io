@@ -1,7 +1,14 @@
+// Функция для получения параметров из URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Функция для выполнения поиска
 async function search() {
     const apiKey = 'AIzaSyCIFvr8VYl9r4lHYkg8LDi3_3htQhjNVuE'; // API-ключ
     const searchEngineId = 'e15fb3d2e0da947bc'; // Search Engine ID
-    const query = document.getElementById('query').value;
+    const query = document.getElementById('query').value || getQueryParam('query');
     const searchType = document.getElementById('searchType').value;
 
     // Параметры запроса для поиска картинок
@@ -26,6 +33,7 @@ async function search() {
     }
 }
 
+// Функция для отображения результатов
 function displayResults(items, searchType) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
@@ -56,3 +64,12 @@ function displayResults(items, searchType) {
         resultsDiv.innerHTML = '<p>Ничего не найдено.</p>';
     }
 }
+
+// Автоматический поиск при загрузке страницы, если есть параметр query в URL
+window.onload = function() {
+    const queryParam = getQueryParam('query');
+    if (queryParam) {
+        document.getElementById('query').value = queryParam;
+        search();
+    }
+};
