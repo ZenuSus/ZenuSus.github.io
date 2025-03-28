@@ -1,0 +1,18 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    color: #00ff00; /* Зелёный неоновый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Чёрный фон */
+    background: radial-gradient(circle, #002200, #000); /* Градиент для "хакерского" фона */
+    animation: flicker 1s infinite alternate;
+}
+
+a {
+    text-decoration: none;   
+    color: #79e479;  
+}
