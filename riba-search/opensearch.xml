@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>riba search</ShortName>
+  <Description>riba search поиск</Description>
+  <Tags>riba search</Tags>
+  <Image type="image/x-icon" height="16" width="16">https://zenusus.github.io/images/riba.jpg</Image>
+  <Url type="text/html" template="https://zenusus.github.io/riba-search?query={searchTerms}"/>
+</OpenSearchDescription>
