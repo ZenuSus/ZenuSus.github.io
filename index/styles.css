@@ -7,9 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000; /* Чёрный фон */
-    background: radial-gradient(circle, #002200, #000); /* Градиент для "хакерского" фона */
-    animation: flicker 1s infinite alternate;
+    background-color: #000000;
+    background-image: url('https://zenusus.github.io/images/night-city.jpg'); /* Фоновая картинка */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(25px); /* Эффект блюра */
 }
 
 @keyframes flicker {
@@ -135,3 +138,37 @@ a.btn {
     text-decoration: none;     
 }
 }
+
+.loader {
+    border: 5px solid #6d6666;
+    border-top: 5px solid #37a018;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.5s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none; /* По умолчанию скрыт */
+  }
+  
+  .content {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .content.loaded {
+    opacity: 1;
+  }
+  
+  .images img {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }

@@ -59,3 +59,65 @@ window.onclick = function(event) {
         donateModal.style.display = "none";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.querySelector(".loader");
+    const content = document.getElementById("content");
+    const apiDataElement = document.getElementById("apiData");
+  
+    // Показываем загрузчик
+    loader.style.display = "block";
+  
+    // 1. Ждём загрузки всех изображений
+    const images = document.querySelectorAll("img");
+    let imagesLoaded = 0;
+  
+    images.forEach(img => {
+      if (img.complete) {
+        // Если изображение уже загружено (кеш)
+        imagesLoaded++;
+      } else {
+        // Если загружается
+        img.addEventListener("load", () => {
+          imagesLoaded++;
+          checkAllLoaded();
+        });
+        img.addEventListener("error", () => {
+          imagesLoaded++; // Учитываем даже если ошибка
+          checkAllLoaded();
+        });
+      }
+    });
+  
+    // 2. Загружаем данные с API (пример с JSONPlaceholder)
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then(response => response.json())
+      .then(data => {
+        apiDataElement.innerHTML = `<h2>${data.title}</h2><p>${data.body}</p>`;
+      })
+      .catch(error => {
+        apiDataElement.innerHTML = "<p>Ошибка загрузки данных</p>";
+      })
+      .finally(() => {
+        checkAllLoaded();
+      });
+  
+    // Проверяем, всё ли загрузилось
+    function checkAllLoaded() {
+      const totalImages = images.length;
+      const apiLoaded = apiDataElement.innerHTML !== "";
+  
+      if (imagesLoaded === totalImages && apiLoaded) {
+        loader.style.display = "none";
+        content.classList.add("loaded");
+      }
+    }
+  
+    // Если нет изображений и API-запросов, просто скрываем загрузчик
+    if (images.length === 0 && !apiDataElement) {
+      setTimeout(() => {
+        loader.style.display = "none";
+        content.classList.add("loaded");
+      }, 500);
+    }
+  });
