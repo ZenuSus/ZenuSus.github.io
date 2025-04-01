@@ -129,6 +129,10 @@ button:hover {
     text-decoration: underline;
 }
 
+.a {
+    color: #4a90e2; 
+}
+
 /* Стили для выпадающего списка */
 #searchType {
     padding: 10px;
