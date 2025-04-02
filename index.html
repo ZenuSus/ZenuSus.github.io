@@ -15,10 +15,34 @@
 
   </head>
 
-<body lang="ru" link="orange" vlink="yellow" alink="orange" > 
+<body  lang="ru" link="orange" vlink="yellow" alink="orange" > 
 <center>
- <h1> Перенаправлние на главную... </h1>
- <h3> Ничего не происходит? <a href="https://zenusus.github.io/index/index.html/"> Нажми здесь </a> </h3>
+  <div class="loader"></div>
 </center>
+
+<style>
+body {
+  background-color: black;
+}
+
+  .loader {
+    border: 5px solid #6d6666;
+    border-top: 5px solid #37a018;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.5s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+</style>
 </body>
 </html>
