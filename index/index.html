@@ -3,84 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zenusus's site </title>
+    <title>zenusus's site</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Шрифт -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://zenusus.github.io/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-      <!-- Индикатор загрузки -->
-  <div class="loader"></div>
 
-  <div class="content" id="content">
-    <div class="container">
-        <button class="btn" id="socialBtn">
-            <i class="fas fa-share-alt"></i> Соц. Сети
-        </button>
-        <button class="btn" id="projectsBtn">
-            <i class="fas fa-folder-open"></i> Проекты
-        </button>
-        <button class="btn" id="infoBtn">
-            <i class="fas fa-info-circle"></i> Обо Мне
-        </button>
-        <button class="btn" id="donateBtn">
-            <i class="fas fa-heart"></i> Задонатить
-        </button>
-        <button class="btn" id="nav" onclick="window.location.href='https://zenusus.github.io/nav'">
-            <i class="fas fa-compass"></i> Навигация по сайту
-        </button>
-        
-    </div>
-
-    <!-- Окно для соц. сетей -->
-    <div id="socialModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-share-alt"></i> Соц. сети</h2>
+    <nav>
+        <div class="container">
             <ul>
-                <li><a href="https://t.me/zenusoff"><i class="fab fa-telegram"></i> Telegram </a></li>
-                <li><a href="https://www.tiktok.com/@zenusus0"><i class="fab fa-tiktok"></i> Tik-Tok </a></li>
-                <li><a href="https://t.me/Zenusoff/753"><i class="fab fa-plus"></i> Больше </a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#social">Соц. Сети</a></li>
             </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <!-- Окно для проектов -->
-    <div id="projectsModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-folder-open"></i> Проекты</h2>
-            <ul>
-                <li><a href="https://zenusus.github.io/riba"><i class="fas fa-fish"></i> Риба Кликер </a></li>
-                <li><a href="https://zenusus.github.io/"><i class="fas fa-globe"></i> Мой Сайт </a></li>
-                <li><a href="#"><i class="fas fa-face-frown"></i> Больше ничего нет </a></li>
-            </ul>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Привет. Я зенусус, это как ни странно мой сайт. Не знаю что тут можно написать, но в любом случае, тут можно увидеть мои проекты. Знаю html/css/js и немного python. Использую арч линукс как систему. Не знаю что ещё сказать. </p>
+    
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Окно для инфы -->
-    <div id="infoModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-info-circle"></i> Обо мне </h2>
-            <p> Даже не знаю что здесь писать. Я обычный человек из интернета, не отличающийся от других. </p>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Мои проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://zenusus.github.io/images/riba-screen.jpg" alt="Проект 1">
+                    <h3>Riba Clicker</h3>
+                    <p>Кликер с рибой. Есть прокачка, скоро версия 2.0 </p>
+                    <a href="/riba.html" class="btn">Подробнее</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://zenusus.github.io/images/rb-screen.jpg" alt="Проект 2">
+                    <h3>Riba Browser</h3>
+                    <p>Максимально простой браузер с основными функциями. Использует веб-вью для открытия сайтов. </p>
+                    <a href="https://t.me/Zenusoff/3947" class="btn">Скачать в Telegram</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://zenusus.github.io/images/rs-screen.png" alt="Проект 3">
+                    <h3>Riba Search</h3>
+                    <p>Простой поисковик.</p>
+                    <a href="/riba-search" class="btn">Перейти</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Окно для доната -->
-    <div id="donateModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-heart"></i> Задонатить </h2>
-            <ul>
-                <li><a href="https://tonviewer.com/EQDERaz8tW7NbhG_VSOfEOn3AGTjGC_LXMg2_BWXfAUFhII9"><i class="fas fa-rocket"></i> TON (Лучший вариант) </a></li>
-                <li><a href="https://boosty.to/zenusus"><i class="fas fa-money-check"></i> Boosty </a></li>
-            </ul>
+    <section id="social" class="section">
+        <div class="container">
+            <h2>Соц. Сети</h2>
+                <div class="social-info">
+                    <div class="social-links">
+                        <a href="https://github.com/zenusus"><i class="fab fa-github"></i></a>
+                        <a href="https://www.tiktok.com/@zenusus0"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://t.me/zenusoff"><i class="fab fa-telegram"></i></a>
+                        <a href="http://x.com/zenu1sus"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2030 Zenusus. Все права украдены.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
