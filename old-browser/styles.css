@@ -1,0 +1,67 @@
+:root {
+    --dark-blue: #0a192f;
+    --medium-blue: #172a45;
+    --light-blue: #64ffda;
+    --white: #e6f1ff;
+    --gray: #8892b0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sofia Sans', 'Sofia Sans', 'Sofia Sans', 'Sofia Sans', 'Sofia Sans';
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    line-height: 1.6;
+    backdrop-filter: blur(25px);
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-blue);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+}
+
+
+/* говнокод лютый */
