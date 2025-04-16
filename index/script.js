@@ -1,3 +1,21 @@
+const parser = new UAParser();
+const browser = parser.getBrowser();
+
+const minVersions = {
+  Chrome: 90,
+  Firefox: 85,
+  Safari: 14,
+  Edge: 90,
+  IE: false, // IE не поддерживается
+};
+
+if (
+  (minVersions[browser.name] && parseInt(browser.major) < minVersions[browser.name]) ||
+  (browser.name === "IE")
+) {
+   window.location.href='/old-browser'
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Мобильное меню
     const menuToggle = document.querySelector('.menu-toggle');
