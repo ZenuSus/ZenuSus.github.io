@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sofia Sans', 'Sofia Sans', 'Sofia Sans', 'Sofia Sans', 'Sofia Sans';
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    line-height: 1.6;
+    background-image: url('https://zenusus.github.io/images/riba.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(25px);
+}
+
+h1 {
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+h4 {
+    color: #ffffff;
+}
+
+p {
+    color: white;
+}
+
+img {
+    border-radius: 15px;
+}
+
+/* Подвал с детьми */
+footer {
+    background-color: #1d458188;
+    backdrop-filter: blur(45px);
+    padding: 20px 0;
+    text-align: center;
+}
