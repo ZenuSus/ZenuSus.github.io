@@ -1,0 +1,145 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a90e2; /* Синий заголовок */
+    margin-bottom: 20px;
+}
+
+a {
+    color: #4a90e2; 
+    margin-bottom: 20px;
+}
+
+/* Поле поиска */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#query {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #2d2d44; /* Темный фон поля */
+    color: #ffffff; /* Белый текст */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a90e2; /* Синяя кнопка */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357abd; /* Темно-синий при наведении */
+}
+
+/* Результаты поиска */
+#results {
+    margin-top: 20px;
+}
+
+.result-item {
+    background-color: #2d2d44; /* Темная подложка */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-item a {
+    color: #4a90e2; /* Синие ссылки */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+.result-item p {
+    color: #cccccc; /* Серый текст */
+    margin-top: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #query {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Стили для картинок */
+.image-item {
+    background-color: #2d2d44;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.image-item a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
+
+.image-item a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для выпадающего списка */
+#searchType {
+    padding: 10px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: #2d2d44;
+    color: #ffffff;
+    font-size: 16px;
+}

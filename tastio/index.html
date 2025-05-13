@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="search" type="application/opensearchdescription+xml" title="Tastio" href="https://zenusus.github.io/Tastio/opensearch.xml">
+
+<!-- opengraph -->
+    <meta property="og:title" content="Tastio"/>
+   <meta property="og:description" content="поисковик Tastio"/>
+   <meta property="og:image" content="https://zenusus.github.io/images/ta-logo.png"/>
+   <meta property="og:type" content="search"/>
+   <meta property="og:url" content= "https://zenusus.github.io/tastio/index.html" />
+   <meta property="og:title" content="Tastio />
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/images/ta-logo.png">
+        <h1>Tastio</h1>
+        <div class="search-box">
+            <input type="text" id="query" placeholder="Запрос">
+            <select id="searchType">
+                <option value="text">Обычный Поиск</option>
+                <option value="image">Картинки</option>
+            </select>
+            <button onclick="search()">Искать</button>
+            <a href="about"> О Tastio/Установить в браузер</a>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
