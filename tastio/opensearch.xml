@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>Tastio</ShortName>
-  <Description>Tastio поиск</Description>
+  <Description>Tastio</Description>
   <Tags>Tastio</Tags>
   <Image type="image/x-icon" height="16" width="16">https://zenusus.github.io/images/ta-logo.png</Image>
   <Url type="text/html" template="https://zenusus.github.io/tastio?query={searchTerms}"/>
