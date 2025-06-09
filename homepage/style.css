@@ -1,0 +1,100 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sofia Sans';
+        }
+        
+        body {
+            background-color: #0a192f;
+            color: #e6f1ff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('back.png') no-repeat center center;
+            background-size: cover;
+            filter: blur(8px) brightness(1);
+            z-index: -1;
+        }
+        
+        .clock {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        
+        .search-container {
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .linkss {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 25px;
+            width: 30%;
+            max-width: 800px;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #e6f1ff;
+            transition: transform 0.3s;
+        }
+        
+        .links:hover {
+            transform: translateY(-5px);
+        }
+        
+        .links-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .links-icon img {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .links-label {
+            font-size: 0.9rem;
+            text-align: center;
+        }

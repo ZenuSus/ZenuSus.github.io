@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="clock" id="clock">00:00:00</div>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search with DuckDuckGo or enter URL" id="search-input">
+    </div>
+    <div class="linkss">
+        <a href="https://www.reddit.com" class="links" target="_blank">
+            <div class="links-icon">
+                <img src="reddit.png" alt="Reddit">
+            </div>
+            <div class="links-label">Reddit</div>
+        </a>
+        
+        
+        <a href="https://github.com" class="links" target="_blank">
+            <div class="links-icon">
+                <img src="github.png" alt="GitHub">
+            </div>
+            <div class="links-label">GitHub</div>
+        </a>
+        
+        
+        <a href="https://chat.deepseek.com" class="links" target="_blank">
+            <div class="links-icon">
+                <img src="deepseek.png" alt="Deepseek">
+            </div>
+            <div class="links-label">Deepseek</div>
+        </a>
+
+    </div>
+
+    <script>
+        // я спиздил почти весь js, потому что сам в нем не ебу
+        function updateTime() {
+            const now = new Date();
+            
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim();
+                if (query) {
+                    if (query.includes('.') && !query.includes(' ')) {
+                        window.location.href = query.startsWith('http') ? query : `https://${query}`;
+                    } else {
+                        window.location.href = `https://www.duckduckgo.com/q=${encodeURIComponent(query)}`;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
