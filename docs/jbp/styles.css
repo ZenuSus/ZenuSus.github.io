@@ -25,22 +25,25 @@ a {
 }
 
 .info {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    width: fit-content;
+    padding: 5px;
     background-color: rgba(19, 19, 19, 0.835);
     border-radius: 15px;
     backdrop-filter: blur(5px);
     transition: 1s;
+    margin: 0 auto; /* Центрирует блок по горизонтали */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .info:hover {
-    backdrop-filter: blur(1px);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     transition: 1s;
 }
 
 body {
     background-image: url('joker.png');
+    backdrop-filter: brightness(0.5);
 }
