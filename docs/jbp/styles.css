@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+h1 {
+    font-family: "Sofia Sans";
+    color: white;
+}
+
+h3 {
+    margin-block: 15px;
+    font-family: "Sofia Sans";
+    color: white;
+    margin-left: 30px;
+}
+
+p {
+    font-family: "Sofia Sans";
+    color: white;
+    margin-left: 40px;
+    max-width: 400px;
+}
+
+a {
+    color:rgb(210, 30, 30);
+}
+
+.info {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(19, 19, 19, 0.835);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info:hover {
+    backdrop-filter: blur(1px);
+    transition: 1s;
+}
+
+body {
+    background-image: url('joker.png');
+}
