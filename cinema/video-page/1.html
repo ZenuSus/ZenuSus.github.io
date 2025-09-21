@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Во все тяжкие RU edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button" onclick="goBack()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Назад
+            </button>
+            <h1>Во все тяжкие RU edition</h1>
+        </header>
+
+        <main>
+            <div class="video-container">
+                <video controls poster="/cinema/vids/preview/1.png">
+                    <source src="/cinema/vids/breakingbad_ru_4k.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео тег.
+                </video>
+            </div>
+
+            <div class="video-info">
+                <h2 class="video-title">Во все тяжкие RU edition</h2>
+                
+                <div class="channel-info">
+                    <div class="channel-icon">
+                        <span>u</span>
+                    </div>
+                    <div class="channel-details">
+                        <h3 class="channel-name">Unknown</h3>
+                    </div>
+                </div>
+
+                <div class="video-description">
+                    <p>Во все тяжкие RU edition, оч крутое гавно сделанное через нейронку, ну а че вы хотите</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

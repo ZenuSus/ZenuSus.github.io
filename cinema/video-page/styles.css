@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111111;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-right: 20px;
+    transition: background-color 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.back-button:hover {
+    background-color: #b4591d;
+}
+
+.back-button svg {
+    margin-right: 8px;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Dela Gothic One";
+}
+
+.video-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+video {
+    width: 100%;
+    display: block;
+    background-color: #000;
+}
+
+.video-info {
+    background: #202020;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: "Montserrat", sans-serif;
+}
+
+.video-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: "Dela Gothic One";
+}
+
+.channel-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+.channel-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+
+.video-description {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #202020;
+    border-radius: 8px;
+}
+
+.video-description p {
+    margin-bottom: 10px;
+}
+
+.video-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .video-title {
+        font-size: 18px;
+    }
+    
+    .channel-icon {
+        margin-bottom: 10px;
+    }
+    
+}
